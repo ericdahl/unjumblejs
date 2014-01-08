@@ -1,6 +1,8 @@
 unjumblejs
 ==========
 
+[http://ericdahl.github.io/unjumblejs/](unjumblejs)
+
 Unjumble words with javascript (experiment)
 
 This is an experimental project, with the goals of:
