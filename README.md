@@ -1,7 +1,7 @@
 unjumblejs
 ==========
 
-[http://ericdahl.github.io/unjumblejs/](unjumblejs)
+[unjumblejs](http://ericdahl.github.io/unjumblejs/)
 
 Unjumble words with javascript (experiment)
 
