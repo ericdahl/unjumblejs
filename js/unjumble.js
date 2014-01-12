@@ -1,5 +1,6 @@
+/* exported unjumble */
 var unjumble = function(wordlist, word) {
-    "use strict";
+    'use strict';
     var results = [];
 
     for (var i = 0, len = wordlist.length; i < len; ++i) {
