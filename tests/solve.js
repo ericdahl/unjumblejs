@@ -1,15 +1,33 @@
+var assert = require('assert'),
+    unjumble = require('../js/unjumble.js');
 
-
-var assert = require('assert');
-var unjumble = require('../js/unjumble');
-
-describe('Array', function () {
+describe('unjumble', function () {
     'use strict';
-    describe('#indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            assert.equal(-1, [1, 2, 3].indexOf(44));
-            assert.equal(-1, [1, 2, 3].indexOf(0));
-//            assert.equal(unjumble(['foo'], 'foo'), 'foo');
+    describe('#solve()', function () {
+
+        var words = [
+            'word',
+            'apple',
+            'dog',
+            'god'
+        ];
+
+        it('already matches', function () {
+            assert.deepEqual(unjumble.solve(words, 'word'), ['word']);
         });
+
+        it('backwards', function () {
+            assert.deepEqual(unjumble.solve(words, 'drow'), ['word']);
+            assert.deepEqual(unjumble.solve(words, 'elppa'), ['apple']);
+        });
+
+        it('no match', function () {
+            assert.deepEqual(unjumble.solve(words, 'zxya'), []);
+        });
+
+        it('multiple matches', function () {
+            assert.deepEqual(unjumble.solve(words, 'ogd'), ['dog', 'god']);
+        });
+
     });
 });
