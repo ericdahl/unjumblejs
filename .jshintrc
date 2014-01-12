@@ -14,5 +14,10 @@
     "unused": true,
     "strict": true,
     "quotmark": "single",
-	"trailing": true
+	"trailing": true,
+    "globals": {
+        "describe": false,
+        "it": false,
+        "require": false
+    }
 }

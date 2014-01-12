@@ -14,10 +14,19 @@ module.exports = function(grunt) {
                 jshintrc: true
             },
             all: ['Gruntfile.js', 'js/*.js', 'test/**/*.js']
+        },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['tests/**/*.js']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.registerTask('default', ['jshint', 'uglify']);
+    grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.registerTask('default', ['jshint', 'uglify', 'mochaTest']);
 };
