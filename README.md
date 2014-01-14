@@ -1,5 +1,6 @@
 unjumblejs
 ==========
+[![Build Status](https://travis-ci.org/ericdahl/unjumblejs.png?branch=master)](https://travis-ci.org/ericdahl/unjumblejs)
 
 [unjumblejs](http://ericdahl.github.io/unjumblejs/)
 
