@@ -31,14 +31,19 @@ module.exports = function(grunt) {
                 files: ['js/*.js', 'tests/**/*.js'],
                 tasks: ['jshint', 'uglify', 'test']
             }
+        },
+        connect: {
+            server: {
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.registerTask('test', ['mochaTest']);
-    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('dev', ['connect', 'watch']);
     grunt.registerTask('default', ['jshint', 'uglify', 'test']);
 };
