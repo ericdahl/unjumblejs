@@ -8,9 +8,9 @@ before_script:
 - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
 
 script:
-  - grunt --stack travis
+- grunt --stack travis
 
 env:
   global:
-  - secure: gRGtSVSxW2Th5kpgaKtvbzz8fVyRUPDdkTos/0hz88AWS3pDABt57nC06rp3zmEifmnjBma2LhbBhUGvUNWQdulK+Xg7hxus9ZuBFC5RE9epbVtyPZ1aPKnPVZKEwwYHXAzwObeYFu53aFB+4RTJgrxLxtc810PuZU9E2EN3kUo=
-  - secure: hAdyr+q9yz6i1l1gxKo8ogZfHHYugYije0bJ00J6BLmsOLPgHx9Tljj1u+pjPYoXAEwSBZqy54ky+mobsVMFEIC3MqsYNqdsJBS/xHEsaKgjc/jG/U2SNCWYM9uy1ZxHsvtjSG8TvbezVP4I7EbDSls5LABovSf8dSTIUUI3NRw=
+  - secure: Fl/qjPMV8zffsBb6XEyGViBL3hFD5zYbIkZtNdbVB9ks4bVqyexeDBQlQk/sMC9CDMfHgBKTUVDnG2KcqIQsh9jHItqx/HdiFMGjdV76sU1DqkKgXDePMBHBRG9TrUm8YANf/2E6tHOXE7zY66c43L+cTl4dvo7JtdBpTpauZEI=
+  - secure: VBWYv4yEHOezY2bGRe+Nptr+EIHtM8e7GYyFi36ZFjAwIvGsE66kd3CE+QaaXIwedV/CClSdxcWG04nP8yQBeLu9+xQG7mBcqdHtkHLRRRVbXOcX1jGzUHkzDnnet0XCcVPZt9fVeKczgyTIqbndOU4E61iqBK79WXU0S7oOXjI=
