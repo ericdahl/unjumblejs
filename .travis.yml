@@ -1,5 +1,10 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
+- curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+env:
+  global:
+  - secure: gRGtSVSxW2Th5kpgaKtvbzz8fVyRUPDdkTos/0hz88AWS3pDABt57nC06rp3zmEifmnjBma2LhbBhUGvUNWQdulK+Xg7hxus9ZuBFC5RE9epbVtyPZ1aPKnPVZKEwwYHXAzwObeYFu53aFB+4RTJgrxLxtc810PuZU9E2EN3kUo=
+  - secure: hAdyr+q9yz6i1l1gxKo8ogZfHHYugYije0bJ00J6BLmsOLPgHx9Tljj1u+pjPYoXAEwSBZqy54ky+mobsVMFEIC3MqsYNqdsJBS/xHEsaKgjc/jG/U2SNCWYM9uy1ZxHsvtjSG8TvbezVP4I7EbDSls5LABovSf8dSTIUUI3NRw=
