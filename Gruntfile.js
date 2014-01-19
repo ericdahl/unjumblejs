@@ -22,11 +22,23 @@ module.exports = function(grunt) {
                 },
                 src: ['tests/**/*.js']
             }
+        },
+        watch: {
+            scripts: {
+                options: {
+                    atBegin: true
+                },
+                files: ['js/*.js', 'tests/**/*.js'],
+                tasks: ['jshint', 'uglify', 'test']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.registerTask('default', ['jshint', 'uglify', 'mochaTest']);
+    grunt.registerTask('test', ['mochaTest']);
+    grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'test']);
 };
