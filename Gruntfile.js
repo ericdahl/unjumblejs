@@ -73,5 +73,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-saucelabs');
     grunt.registerTask('test', ['mochaTest']);
     grunt.registerTask('dev', ['connect', 'watch']);
+    grunt.registerTask('travis', ['default', 'connect', 'saucelabs-mocha']);
     grunt.registerTask('default', ['jshint', 'uglify', 'test']);
 };

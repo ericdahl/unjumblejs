@@ -1,9 +1,15 @@
 language: node_js
+
 node_js:
 - '0.10'
+
 before_script:
 - npm install -g grunt-cli
 - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+
+script:
+  - grunt --stack travis
+
 env:
   global:
   - secure: gRGtSVSxW2Th5kpgaKtvbzz8fVyRUPDdkTos/0hz88AWS3pDABt57nC06rp3zmEifmnjBma2LhbBhUGvUNWQdulK+Xg7hxus9ZuBFC5RE9epbVtyPZ1aPKnPVZKEwwYHXAzwObeYFu53aFB+4RTJgrxLxtc810PuZU9E2EN3kUo=
