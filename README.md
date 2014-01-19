@@ -1,6 +1,7 @@
 unjumblejs
 ==========
 [![Build Status](https://travis-ci.org/ericdahl/unjumblejs.png?branch=master)](https://travis-ci.org/ericdahl/unjumblejs)
+[![Sauce Labs Test Status](https://saucelabs.com/buildstatus/unjumblejs)](https://saucelabs.com/u/unjumblejs)
 
 [unjumblejs](http://ericdahl.github.io/unjumblejs/)
 
