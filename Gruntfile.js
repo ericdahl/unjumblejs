@@ -3,6 +3,16 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'js/',
+                src: '**',
+                dest: 'dist/',
+                flatten: true,
+                filter: 'isFile'
+            }
+        },
         uglify: {
             build: {
                 src: 'js/unjumble.js',
@@ -65,6 +75,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -74,5 +85,5 @@ module.exports = function(grunt) {
     grunt.registerTask('test', ['mochaTest']);
     grunt.registerTask('dev', ['connect', 'watch']);
     grunt.registerTask('travis', ['default', 'connect', 'saucelabs-mocha']);
-    grunt.registerTask('default', ['jshint', 'uglify', 'test']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'copy', 'test']);
 };
