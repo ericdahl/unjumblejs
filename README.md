@@ -35,3 +35,16 @@ hints()
 hints()
 // → ['apple']
 ```
+#### Development / Testing
+1. Clone the repo
+``` $ git clone git@github.com:ericdahl/unjumblejs.git```
+2. Go into directory
+``` $ cd unjumblejs ```
+3. Install dependencies
+``` $ npm install ```
+4. If necessary, install grunt-cli
+``` $ sudo npm install -g grunt-cli ```
+5. Run tests (using node). This step will also run jshint against the code.
+``` $ grunt # 'npm test' will also invoke grunt like this ```
+6. Develop with live test updates. This uses grunt modules to watch the files and run tests with npm. It also stands up a local server on port 8000 that can be used to also view the test results.
+``` $ grunt dev```
