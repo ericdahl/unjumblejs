@@ -42,6 +42,18 @@ module.exports = function(grunt) {
                 tasks: ['jshint', 'uglify', 'test']
             }
         },
+        /*jshint camelcase: false */
+        compare_size: {
+            files: 'dist/*.js',
+            options: {
+                cache: '.sizecache.json',
+                compress: {
+                    gz: function(fileContents) {
+                        return require('gzip-js').zip(fileContents).length;
+                    }
+                }
+            }
+        },
         connect: {
             server: {
             }
@@ -74,7 +86,7 @@ module.exports = function(grunt) {
             }
         }
     });
-
+    grunt.loadNpmTasks('grunt-compare-size');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');

@@ -48,3 +48,5 @@ hints()
 ``` $ grunt # 'npm test' will also invoke grunt like this ```
 6. Develop with live test updates. This uses grunt modules to watch the files and run tests with npm. It also stands up a local server on port 8000 that can be used to also view the test results.
 ``` $ grunt dev```
+6. Check the size of the library, comparing the minified/gzipped versions to the originals.
+``` $ grunt compare_size```
