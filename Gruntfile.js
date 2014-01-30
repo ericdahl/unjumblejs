@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 src: 'js/unjumble.js',
-                dest: 'build/unjumble.min.js'
+                dest: 'dist/unjumble.min.js'
             }
         },
         jshint: {
